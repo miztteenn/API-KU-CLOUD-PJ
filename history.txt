@@ -1,0 +1,9 @@
+-npm init 
+-npm install express --save 
+-npm install body-parser --save 
+-npm install --save morgan 
+-npm install --save-dev nodemon 
+-npm install mongodb@2.2.33 --save
+-npm install ajax-request --save  // can't use sync
+-npm install deep-equal --save
+-npm install request --save // can use sync
