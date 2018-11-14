@@ -4,6 +4,8 @@ const app  = express()
 const morgan = require('morgan')
 const bodyParser = require('body-parser')
 
+const webService = require('./api/routers/webService.Routers')
+
 app.use(morgan('dev')); // เเสดงการทำงาน
 
 app.use(bodyParser.urlencoded({extended : false})); // false ใช้อัลกอในการ map json ธรรมดา ,true = high
@@ -24,9 +26,20 @@ app.use((req, res, next) => {
 app.get('/',(req , res , next) =>{  // path /
     res.status(200).json({
         message : 'Get root /'
-    });
+    })
 
-});
+})
+
+app.post('/',(req , res , next) => {
+    res.status(200).json({
+        message : 'Post root /'
+    })
+})
+
+
+// path webservice
+app.use('/webService',webService)
+
 
 
 

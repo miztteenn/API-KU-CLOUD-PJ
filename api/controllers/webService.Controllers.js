@@ -21,3 +21,9 @@ exports.get_all = (req, res, next) =>{
     })
 
 }
+
+exports.createfirstWebService = (req ,res,next) =>{
+    console.log(req.body)
+   
+    //res.json(output)
+}
